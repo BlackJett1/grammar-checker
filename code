@@ -1,4 +1,4 @@
-console.log("Ace123"); // replace with your nickname + last 3 OSIS
+console.log("Ace123");
 
 let story = "Last weekend, I took literally the most beautifull bike ride of my life. The route is called the \"Seven Sisters,\" and it literally goes through the heart of the valley. I think the most impressive part was the scenery, which was absolutely fucking breathtaking. I mean, the hills were lush and green, and the sky was a clear blue.";
 
@@ -11,3 +11,27 @@ storyWords.forEach(word => {
 });
 
 console.log("Word count is:", count);
+
+let unnecessaryWord = "literally";
+
+storyWords = storyWords.filter(word => {
+  return word !== unnecessaryWord;
+});
+
+let misspelledWord = "beautifull";
+
+storyWords = storyWords.map(word => {
+  if (word === misspelledWord) {
+    return "beautiful";
+  }
+  return word;
+});
+
+let badWord = "fucking";
+
+let badWordIndex = storyWords.findIndex(word => word === badWord);
+console.log("Bad word index:", badWordIndex);
+
+storyWords[badWordIndex] = "really";
+
+console.log(storyWords.join(" "));
