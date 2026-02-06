@@ -1,0 +1,13 @@
+console.log("Ace123"); // replace with your nickname + last 3 OSIS
+
+let story = "Last weekend, I took literally the most beautifull bike ride of my life. The route is called the \"Seven Sisters,\" and it literally goes through the heart of the valley. I think the most impressive part was the scenery, which was absolutely fucking breathtaking. I mean, the hills were lush and green, and the sky was a clear blue.";
+
+let storyWords = story.split(" ");
+
+let count = 0;
+
+storyWords.forEach(word => {
+  count++;
+});
+
+console.log("Word count is:", count);
