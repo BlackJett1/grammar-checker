@@ -34,4 +34,18 @@ console.log("Bad word index:", badWordIndex);
 
 storyWords[badWordIndex] = "really";
 
+let lengthCheck = storyWords.every(word => word.length <= 10);
+console.log("All words <= 10 characters:", lengthCheck);
+
+let longWords = storyWords.filter(word => word.length > 10);
+console.log("Words longer than 10 characters:", longWords);
+
+let lessThanTen = storyWords.filter(word => word.length <= 10).length;
+let moreThanTen = storyWords.filter(word => word.length > 10).length;
+
+console.log("Number of words:", storyWords.length);
+console.log("Number of bad index word:", badWordIndex);
+console.log("Number of words less than 10 characters:", lessThanTen);
+console.log("Number of words more than 10 characters:", moreThanTen);
+
 console.log(storyWords.join(" "));
